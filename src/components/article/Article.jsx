@@ -4,7 +4,7 @@ import './article.css'
 const Article = ({ imgUrl, date, title }) => (
     <div className='AUREO__blog-container_article'>
       <div className='AUREO__blog-container_article-image'>
-        <img src={imgUrl} alt="blog image" />
+        <img src={imgUrl} alt="blog" />
       </div>
       <div className='AUREO__blog-container_article-content'>
         <div>

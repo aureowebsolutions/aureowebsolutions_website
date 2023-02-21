@@ -5,7 +5,7 @@ const Feature = ({title, text, imgUrl}) => {
   return (
     <div className='AUREO__features-container__feature'>
       <div className='AUREO__features-container__feature-title'>
-          <img src={imgUrl} width='64px'/>
+          <img src={imgUrl} width='64px' alt='services-features '/>
           <div></div>
           <h1>{title}</h1>
       </div>
