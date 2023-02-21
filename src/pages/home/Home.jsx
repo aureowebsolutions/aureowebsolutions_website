@@ -2,8 +2,6 @@ import React from 'react'
 import './Home.css'
 import {Brand, Cta, Navbar } from '../../components'
 import { Footer, Blog, Features, WhatAUREO, Header, Posibiity} from '../../containers'
-import ContactUs from '../contact-us/ContactUs'
-import ContactForm from '../../containers/forms/ContactForm'
 
 const Home = () => {
   return (
