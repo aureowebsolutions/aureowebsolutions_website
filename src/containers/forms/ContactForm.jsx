@@ -37,16 +37,18 @@ const ContactForm = () => {
    <div class="flex lg:justify-center">
       <div class="flex flex-wrap lg:justify-between -mx-4">
          <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
-            <div class="max-w-[570px] mb-12 lg:mb-0">
+            <div class="max-w-[570px] mb-12 px-10 lg:mb-0">
                <span className='AUREO_contact-us' class="block mb-4 text-base text-primary font-semibold">
                Contact Us
                </span>
-               <h2 className='AUREO_contact-us-text'
+               <h2 className='AUREO_contact-us-text '
                   class="
-                  text-dark
+                  text-transparent
+                  gradient__text
                   mb-6
                   uppercase
                   font-bold
+                  bg-clip-text
                   text-[32px]
                   sm:text-[40px]
                   lg:text-[36px]
