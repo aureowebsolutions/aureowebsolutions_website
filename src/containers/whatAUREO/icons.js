@@ -5,6 +5,7 @@ import icon04 from '../../assets/icons8-maintenance-64.png'
 import icon05 from '../../assets/icons8-data-migration-48.png'
 import icon06 from '../../assets/icons8-optimization-64.png'
 import icon07 from '../../assets/icons8-combo-chart-100.png'
+import logo_aureo from '../../assets/logo_aws.png'
 
 export {
     icon01,
@@ -13,5 +14,6 @@ export {
     icon04,
     icon05,
     icon06,
-    icon07
+    icon07,
+    logo_aureo
 }
