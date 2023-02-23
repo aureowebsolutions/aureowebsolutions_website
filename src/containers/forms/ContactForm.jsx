@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react'
 import './ContactForm.css'
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
    const form = useRef();
-
+   
    const Result = () => {
       return(
          <p> Your message has been successfully sent. I will contact you soon.</p>
@@ -12,7 +13,12 @@ const ContactForm = () => {
    }
    
    const[result,showResult] = useState(false)
+   const[verified, setVerified] = useState(false)
 
+   function onChange(value) {
+      console.log("Captcha value:", value);
+      setVerified(true);
+    }
    const sendEmail = (e) => {
       e.preventDefault();
   
@@ -65,7 +71,11 @@ const ContactForm = () => {
          </div>
          <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
             <div class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
-               <form ref={form} onSubmit={sendEmail}>
+               <form ref={form} onSubmit={sendEmail}
+               name="contact" 
+               method="POST" 
+               data-netlify-recaptcha="true" 
+               data-netlify="true">
                   <div class="mb-6">
                      <input
                         type="text"
@@ -143,6 +153,10 @@ const ContactForm = () => {
                         required
                         ></textarea>
                   </div>
+                  <ReCAPTCHA
+                     sitekey="6LceXqckAAAAAORLyh4jaKaTYzMIbv9_sopmk4Gt"
+                     onChange={onChange}
+                  />
                   <div>
                      <button
                         type="submit"
@@ -155,7 +169,9 @@ const ContactForm = () => {
                         p-3
                         transition
                         hover:bg-opacity-90
+                        mt-5
                         "
+                        disabled={!verified}
                         >
                      Send Message
                      </button>
