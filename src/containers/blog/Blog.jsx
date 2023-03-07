@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './blog.css'
 import Article from '../../components/article/Article'
 import {blogs_json} from './imports'
@@ -15,7 +15,7 @@ const Blog = () => {
       </div>
       <div className='AUREO__blog-container'>
         {blogs_json.blogs.map((item, index) => {
-          if(index == 0){
+          if(index === 0){
 
             return(
                 <div className='AUREO__blog-container_groupA'>
@@ -26,7 +26,7 @@ const Blog = () => {
         })}
         <div className='AUREO__blog-container_groupB'>
             {blogs_json.blogs.map((item, index) => {
-              if(index != 0){
+              if(index !== 0){
                 return(
                   <Article blogId={item.id} imgUrl={blogImages(`./${item.image_url}`)} date={item.date_published} title={item.title}/>
                 )

@@ -5,7 +5,6 @@ import './App.css'
 import Home from './pages/home/Home'
 import ContactUs from './pages/contact-us/ContactUs'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { BlogPage } from './containers/blog/BlogPage'
 import BlogLayout from './containers/blog_layout/BlogLayout'
 import ScrollToTop from './components/scrollTop/ScrollTotop'
 
