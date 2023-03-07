@@ -34,12 +34,12 @@ const Navbar = () => {
         }
         { toggleMenu && (
           <div className='AUREO__navbar-menu_container scale-up-center'>
-            <div className='AUREO__navbar-menu_container-links'>
-            <p><a href="/">Home</a></p>
-          <p><a href="/#wAUREO">What's AUREO</a></p>
-          <p><a href="/#services">Services</a></p>
-          <p><a href="/contact-us">Contact Us</a></p>
-          <p><a href="/#blog">Blogs</a></p>
+              <div className='AUREO__navbar-menu_container-links'>
+                <p><a href="/">Home</a></p>
+                <p><a href="/#wAUREO">What's AUREO</a></p>
+                <p><a href="/#services">Services</a></p>
+                <p><a href="/contact-us">Contact Us</a></p>
+                <p><a href="/#blog">Blogs</a></p>
               </div>
           </div>
         )}
