@@ -255,7 +255,7 @@ const BlogLayout = () => {
                 <div class="bg-white shadow-sm rounded-sm p-4 mt-8 mb-8">
                     <h3 class="text-xl font-semibold text-gray-700 mb-3">Random Post</h3>
                     <div class="space-y-4">
-                        <a href="" class="flex group">
+                        <a href="the-impact-of-gpt3-on-website-development" class="flex group">
                             <div class="flex-shrink-0">
                                 <img src={blog01} alt="blog01" class="w-20 h-14 rounded object-cover"/>
                             </div>
@@ -271,7 +271,7 @@ const BlogLayout = () => {
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="flex group">
+                        <a href="the-role-of-a-website-in-a-company-online-presence" class="flex group">
                             <div class="flex-shrink-0">
                                 <img src={blog02} alt="blog01" class="w-20 h-14 rounded object-cover"/>
                             </div>
@@ -287,7 +287,7 @@ const BlogLayout = () => {
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="flex group">
+                        <a href="the-benefits-of-ecommerce-for-small-businesses" class="flex group">
                             <div class="flex-shrink-0">
                                 <img src={blog05} alt="blog01" class="w-20 h-14 rounded object-cover"/>
                             </div>
