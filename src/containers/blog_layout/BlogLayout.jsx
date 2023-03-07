@@ -223,24 +223,24 @@ const BlogLayout = () => {
                 <div class="bg-white shadow-sm rounded-sm p-4 mt-8">
                     <h3 class="text-xl font-semibold text-gray-700 mb-3">Tags</h3>
                     <div class="flex flex-wrap gap-2">
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Web Design</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">SEO</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Web Develop</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Optimization</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Website</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Google Possitioning</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Shopify</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Store</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Chat GTP</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Artificial Intelligence</a>
-                        <a href="#" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Store</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Web Design</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">SEO</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Web Develop</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Optimization</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Website</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Google Possitioning</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Shopify</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Store</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Chat GTP</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Artificial Intelligence</a>
+                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Store</a>
                     </div>
                 </div>
                 {/**** Categories Right-side section ****/}
                 <div class="bg-white shadow-sm rounded-sm p-4">
                     <h3 class="text-xl font-semibold text-gray-700 mb-3">Categories</h3>
                     <div class="text-gray-700 space-y-2">
-                        <a href="#" class="flex items-center font-semibold leading-4 uppercase text-sm hover:text-blue-500 transition">
+                        <a href="" class="flex items-center font-semibold leading-4 uppercase text-sm hover:text-blue-500 transition">
                             <span class="mr-2">
                                 <i class="far fa-folder-open"></i>
                             </span>
@@ -255,7 +255,7 @@ const BlogLayout = () => {
                 <div class="bg-white shadow-sm rounded-sm p-4 mt-8 mb-8">
                     <h3 class="text-xl font-semibold text-gray-700 mb-3">Random Post</h3>
                     <div class="space-y-4">
-                        <a href="#" class="flex group">
+                        <a href="" class="flex group">
                             <div class="flex-shrink-0">
                                 <img src={blog01} alt="blog01" class="w-20 h-14 rounded object-cover"/>
                             </div>
@@ -271,7 +271,7 @@ const BlogLayout = () => {
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="flex group">
+                        <a href="" class="flex group">
                             <div class="flex-shrink-0">
                                 <img src={blog02} alt="blog01" class="w-20 h-14 rounded object-cover"/>
                             </div>
@@ -287,7 +287,7 @@ const BlogLayout = () => {
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="flex group">
+                        <a href="" class="flex group">
                             <div class="flex-shrink-0">
                                 <img src={blog05} alt="blog01" class="w-20 h-14 rounded object-cover"/>
                             </div>
