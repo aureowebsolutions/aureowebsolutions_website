@@ -223,21 +223,21 @@ const BlogLayout = () => {
                 <div class="bg-white shadow-sm rounded-sm p-4 mt-8">
                     <h3 class="text-xl font-semibold text-gray-700 mb-3">Tags</h3>
                     <div class="flex flex-wrap gap-2">
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Web Design</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">SEO</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Web Develop</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Optimization</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Website</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Google Possitioning</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Shopify</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Store</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Chat GTP</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Artificial Intelligence</a>
-                        <a href="" class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Store</a>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Web Design</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">SEO</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Web Develop</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Optimization</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Website</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Google Possitioning</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Shopify</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Store</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Chat GTP</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Artificial Intelligence</div>
+                        <div class="px-3 py-1 text-sm border corder-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">Store</div>
                     </div>
                 </div>
                 {/**** Categories Right-side section ****/}
-                <div class="bg-white shadow-sm rounded-sm p-4">
+                {/* <div class="bg-white shadow-sm rounded-sm p-4">
                     <h3 class="text-xl font-semibold text-gray-700 mb-3">Categories</h3>
                     <div class="text-gray-700 space-y-2">
                         <a href="" class="flex items-center font-semibold leading-4 uppercase text-sm hover:text-blue-500 transition">
@@ -250,7 +250,7 @@ const BlogLayout = () => {
                             <span class='font-normal ml-auto'>(12)</span>
                         </a>
                     </div>
-                </div>
+                </div> */}
                 {/**** random post Right-side section ****/}
                 <div class="bg-white shadow-sm rounded-sm p-4 mt-8 mb-8">
                     <h3 class="text-xl font-semibold text-gray-700 mb-3">Random Post</h3>
