@@ -22,7 +22,7 @@ const BlogLayout = () => {
                 {/**** Related post Middle section ****/}
                 <div class="flex justify-between bg-white px-3 py-2 items-center rounded-sm mb-4 max-sm:hidden">
                     <h5 class="text-base uppercase font-semibold">Related Post</h5>
-                    <a href="#" class="text-white bg-blue-500 px-3 py-1 rounded-sm uppercase text-sm hover:bg-transparent hover:text-blue-500 transition border-blue-500"> see more</a>
+                    <a href="" class="text-white bg-blue-500 px-3 py-1 rounded-sm uppercase text-sm hover:bg-transparent hover:text-blue-500 transition border-blue-500"> see more</a>
                 </div>
                 {/**** Articles list medium image Middle-botton section ****/}
                 <div class="grid gap-4 grid-cols-2 mt-4 max-sm:hidden">

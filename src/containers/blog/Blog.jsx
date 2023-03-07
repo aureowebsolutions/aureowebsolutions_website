@@ -22,6 +22,8 @@ const Blog = () => {
                   <Article blogId={item.id} imgUrl={blogImages(`./${item.image_url}`)} date={item.date_published} title={item.title}/>
                 </div>
             )
+          }else{
+            return null;
           }
         })}
         <div className='AUREO__blog-container_groupB'>
@@ -30,6 +32,8 @@ const Blog = () => {
                 return(
                   <Article blogId={item.id} imgUrl={blogImages(`./${item.image_url}`)} date={item.date_published} title={item.title}/>
                 )
+              }else{
+                return null;
               }
             })}
         </div>
