@@ -22,7 +22,7 @@ const BlogLayout = () => {
                 {/**** Related post Middle section ****/}
                 <div class="flex justify-between bg-white px-3 py-2 items-center rounded-sm mb-4 max-sm:hidden">
                     <h5 class="text-base uppercase font-semibold">Related Post</h5>
-                    <a href="" class="text-white bg-blue-500 px-3 py-1 rounded-sm uppercase text-sm hover:bg-transparent hover:text-blue-500 transition border-blue-500"> see more</a>
+                    <a href="/" class="text-white bg-blue-500 px-3 py-1 rounded-sm uppercase text-sm hover:bg-transparent hover:text-blue-500 transition border-blue-500"> Home</a>
                 </div>
                 {/**** Articles list medium image Middle-botton section ****/}
                 <div class="grid gap-4 grid-cols-2 mt-4 max-sm:hidden">
@@ -122,13 +122,13 @@ const BlogLayout = () => {
                 <div class="bg-white shadow-sm rounded-sm p-4 max-lg:mt-8 max-md:mt-0">
                     <h3 class="text-xl font-semibold text-gray-700 mb-3">Social Plugin</h3>
                     <div class=" flex gap-2">
-                        <a href="https://www.facebook.com/aureowebsolutions" target="_blank" class='w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800'>
+                        <a href="https://www.facebook.com/aureowebsolutions" target="_blank" rel="noopener" class='w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800'>
                             <i class="fab fa-facebook-f" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.instagram.com/aureowebsolutions" target="_blank" class='w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800'>
+                        <a href="https://www.instagram.com/aureowebsolutions" target="_blank" rel="noopener" class='w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800'>
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/lewins-jose-correa-cisneros-823a4515a/" target="_blank" class='w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800'>
+                        <a href="https://www.linkedin.com/in/lewins-jose-correa-cisneros-823a4515a/" target="_blank" rel="noopener" class='w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800'>
                             <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                         </a>
                     </div>
