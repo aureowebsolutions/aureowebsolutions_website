@@ -19,7 +19,13 @@ const Blog = () => {
 
             return(
                 <div className='AUREO__blog-container_groupA'>
-                  <Article blogId={item.id} imgUrl={blogImages(`./${item.image_url}`)} date={item.date_published} title={item.title}/>
+                  <Article 
+                  blogId={item.id} 
+                  imgUrl={blogImages(`./${item.image_url}`)} 
+                  date={item.date_published} 
+                  title={item.title}
+                  author={item.author}
+                  content={item.content[0].text}/>
                 </div>
             )
           }else{
@@ -30,7 +36,11 @@ const Blog = () => {
             {blogs_json.blogs.map((item, index) => {
               if(index !== 0){
                 return(
-                  <Article blogId={item.id} imgUrl={blogImages(`./${item.image_url}`)} date={item.date_published} title={item.title}/>
+                  <Article blogId={item.id} 
+                  imgUrl={blogImages(`./${item.image_url}`)} 
+                  date={item.date_published} 
+                  title={item.title}
+                  author={item.author}/>
                 )
               }else{
                 return null;

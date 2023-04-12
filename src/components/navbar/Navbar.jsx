@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/Logo-aureowebsolutions-whiteletter.png'
 import './navbar.css'
 
@@ -12,7 +13,9 @@ const Navbar = () => {
     <div className='AUREO__navbar'>
       <div className='AUREO__navbar-links'>
         <div className='AUREO__navbar-links_logo'>
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
         <div className='AUREO__navbar-links_container'>
           <p><a href="/">Home</a></p>
