@@ -1,24 +1,24 @@
 import React from 'react'
-import './Home.css'
-import {Brand, Cta, Navbar } from '../../components'
-import { Footer, Blog, Features, WhatAUREO, Header, Posibiity} from '../../containers'
+import Navbar from '../../components/navbar/Navbar'
+import { Header, WhatAUREO, Features, Posibility, Portfolio, TrustBand, Testimonials, Footer } from '../../containers'
+import ContactForm from '../../containers/forms/ContactForm'
+import { useFadeUp } from '../../components/useFadeUp'
 
 const Home = () => {
+  useFadeUp()
   return (
-    <div className='App'>
-          <div className='gradient__bg'>
-               <Navbar />
-               <Header />
-          </div> 
-          <Brand />
-          <WhatAUREO />
-          <Features />
-          <Posibiity />
-          <Cta />
-          <Blog />
-          <Footer />
-          
-     </div>
+    <div>
+      <Navbar />
+      <Header />
+      <WhatAUREO />
+      <Features />
+      <Posibility />
+      <Portfolio />
+      <TrustBand />
+      <Testimonials />
+      <ContactForm />
+      <Footer />
+    </div>
   )
 }
 

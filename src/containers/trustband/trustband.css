@@ -1,0 +1,54 @@
+.aureo-trust {
+  background: var(--canvas);
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.aureo-trust__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aureo-trust__headline {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.aureo-trust__sub {
+  font-size: 16px;
+  color: var(--body);
+  max-width: 540px;
+  margin: 0 auto 56px;
+  line-height: 1.6;
+}
+
+.aureo-trust__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.aureo-trust__badge {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.aureo-trust__badge-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.aureo-trust__badge-sub {
+  font-size: 13px;
+  color: var(--muted);
+}

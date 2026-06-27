@@ -11,8 +11,9 @@
 # production
 /build
 
-# design-sync build output
+# design-sync build output and tooling dependencies
 /ds-bundle
+/.ds-sync/node_modules
 
 # misc
 .DS_Store

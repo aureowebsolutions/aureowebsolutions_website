@@ -1,0 +1,168 @@
+.block-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.be-empty {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  padding: 24px;
+  border: 1px dashed var(--hairline);
+  border-radius: 8px;
+}
+
+/* ── Block ───────────────────────────────────────────────────────────────── */
+
+.be-block {
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.be-block__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--elevated);
+  border-bottom: 1px solid var(--hairline);
+  gap: 8px;
+}
+
+.be-block__actions {
+  display: flex;
+  gap: 4px;
+}
+
+.be-block__body {
+  padding: 12px;
+  background: var(--card);
+}
+
+/* ── Inputs ──────────────────────────────────────────────────────────────── */
+
+.be-input {
+  background: var(--elevated);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.be-input:focus { border-color: var(--gold); }
+.be-input::placeholder { color: var(--muted); }
+
+.be-textarea {
+  width: 100%;
+  resize: vertical;
+  line-height: 1.6;
+  min-height: 80px;
+}
+
+.be-text-grow {
+  flex: 1;
+  width: 100%;
+}
+
+.be-select-type,
+.be-select-level {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-family: var(--font-family);
+  color: var(--body);
+  cursor: pointer;
+}
+
+/* ── Row layout ──────────────────────────────────────────────────────────── */
+
+.be-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Bullet list ─────────────────────────────────────────────────────────── */
+
+.be-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.be-bullet-dot {
+  color: var(--gold);
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+
+.be-btn {
+  font-size: 13px;
+  font-family: var(--font-family);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--hairline);
+  background: var(--elevated);
+  color: var(--body);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.be-btn:hover:not(:disabled) {
+  background: var(--hairline);
+  color: var(--white);
+}
+
+.be-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.be-btn--ghost {
+  border-color: transparent;
+  background: transparent;
+}
+
+.be-btn--danger:hover:not(:disabled) {
+  background: #7f1d1d;
+  border-color: #991b1b;
+  color: #fca5a5;
+}
+
+.be-btn--add-item {
+  align-self: flex-start;
+  font-size: 13px;
+  color: var(--gold);
+  border-color: transparent;
+  background: transparent;
+  padding: 2px 0;
+}
+
+.be-btn--add-item:hover { color: var(--gold-active); background: transparent; }
+
+.be-btn--add-block {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: 1px dashed var(--hairline);
+  background: transparent;
+  color: var(--muted);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.be-btn--add-block:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: transparent;
+}

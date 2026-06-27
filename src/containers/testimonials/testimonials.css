@@ -1,0 +1,78 @@
+.aureo-testimonials {
+  background: var(--card);
+  padding: 100px 40px;
+}
+
+.aureo-testimonials__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aureo-testimonials__overline {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.aureo-testimonials__heading {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: var(--white);
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.aureo-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.aureo-quote {
+  background: var(--elevated);
+  border-radius: 8px;
+  padding: 32px;
+  border: 1px solid var(--hairline);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.aureo-quote__mark {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.12;
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  line-height: 1;
+  font-family: Georgia, serif;
+  pointer-events: none;
+}
+
+.aureo-quote__text {
+  font-size: 15px;
+  color: var(--body);
+  line-height: 1.7;
+  position: relative;
+}
+
+.aureo-quote__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.aureo-quote__title {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}

@@ -1,53 +1,58 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
-import { Link } from 'react-router-dom'
-import logo from '../../assets/Logo-aureowebsolutions-whiteletter.png'
 import './navbar.css'
 
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
-//BEN -> Block Element Modifier
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
-const Navbar = () => { 
-  const [toggleMenu, setToggleMenu] = useState(false)
   return (
-    <div className='AUREO__navbar'>
-      <div className='AUREO__navbar-links'>
-        <div className='AUREO__navbar-links_logo'>
-          <Link to="/">
-            <img src={logo} alt="logo" />
-          </Link>
+    <nav className={`aureo-nav${scrolled ? ' aureo-nav--scrolled' : ''}`}>
+      <div className="aureo-nav__brand">
+        <a href="/">
+          <span className="aureo-nav__brand-aureo">Aureo</span>
+          <span className="aureo-nav__brand-sub"> Web Solutions</span>
+        </a>
+      </div>
+
+      <div className="aureo-nav__links">
+        <a href="/#services">Services</a>
+        <a href="/#work">Work</a>
+        <a href="/#process">Process</a>
+        <a href="/#contact">Contact</a>
+      </div>
+
+      <div className="aureo-nav__actions">
+        <a href="/#contact" className="aureo-nav__login">Log In</a>
+        <a href="/#contact" className="aureo-nav__cta">Get Started</a>
+      </div>
+
+      <button
+        className="aureo-nav__hamburger"
+        aria-label="Toggle menu"
+        onClick={() => setMenuOpen((o) => !o)}
+      >
+        {menuOpen
+          ? <RiCloseLine color="var(--body)" size={24} />
+          : <RiMenu3Line color="var(--body)" size={24} />}
+      </button>
+
+      {menuOpen && (
+        <div className="aureo-nav__mobile scale-up-center">
+          <a href="/#services" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="/#work"     onClick={() => setMenuOpen(false)}>Work</a>
+          <a href="/#process"  onClick={() => setMenuOpen(false)}>Process</a>
+          <a href="/#contact"  onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="/#contact"  onClick={() => setMenuOpen(false)} className="aureo-nav__cta">Get Started</a>
         </div>
-        <div className='AUREO__navbar-links_container'>
-          <p><a href="/">Home</a></p>
-          <p><a href="/#wAUREO">What's AUREO</a></p>
-          <p><a href="/#services">Services</a></p>
-          <p><a href="/contact-us">Contact Us</a></p>
-          <p><a href="/#blog">Blogs</a></p>
-        </div>
-      </div>
-      <div className='AUREO__navbar-sign'>
-        <p>Sign in</p>
-        <button type='button'>Sign up</button>
-      </div>
-      <div className='AUREO__navbar-menu'>
-        {
-          toggleMenu
-            ? <RiCloseLine color="#fff" size={27} onClick={()=> setToggleMenu(false)} />
-            : <RiMenu3Line color="#fff" size={27} onClick={()=> setToggleMenu(true)} />
-        }
-        { toggleMenu && (
-          <div className='AUREO__navbar-menu_container scale-up-center'>
-              <div className='AUREO__navbar-menu_container-links'>
-                <p><a href="/">Home</a></p>
-                <p><a href="/#wAUREO">What's AUREO</a></p>
-                <p><a href="/#services">Services</a></p>
-                <p><a href="/contact-us">Contact Us</a></p>
-                <p><a href="/#blog">Blogs</a></p>
-              </div>
-          </div>
-        )}
-      </div>
-    </div>
+      )}
+    </nav>
   )
 }
 
