@@ -11,6 +11,9 @@
 # production
 /build
 
+# design-sync build output
+/ds-bundle
+
 # misc
 .DS_Store
 .env.local
