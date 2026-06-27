@@ -1,0 +1,30 @@
+{
+  "projectId": "6eae6030-3b19-4065-b956-8b8feb4ab742",
+  "pkg": "aureowebsolutions-ui",
+  "globalName": "AureoUI",
+  "shape": "package",
+  "buildCmd": "react-scripts build",
+  "srcDir": "src",
+  "cssEntry": "src/index.css",
+  "componentSrcMap": {
+    "Navbar":     "src/components/navbar/Navbar.jsx",
+    "Brand":      "src/components/brand/Brand.jsx",
+    "Cta":        "src/components/cta/Cta.jsx",
+    "Feature":    "src/components/feature/Feature.jsx",
+    "Article":    "src/components/article/Article.jsx",
+    "Header":     "src/containers/header/Header.jsx",
+    "Footer":     "src/containers/footer/Footer.jsx",
+    "Blog":       null,
+    "Features":   "src/containers/features/Features.jsx",
+    "WhatAUREO":  "src/containers/whatAUREO/WhatAUREO.jsx",
+    "Posibility": "src/containers/posibility/Posibility.jsx"
+  },
+  "dtsPropsFor": {
+    "Feature":  "title?: string; text?: string; imgUrl?: string;",
+    "Article":  "imgUrl?: string; date?: string; title?: string; blogId?: string; content?: string; author?: string;"
+  },
+  "provider": { "component": "MemoryRouter" },
+  "overrides": {
+    "Navbar": { "cardMode": "column" }
+  }
+}
