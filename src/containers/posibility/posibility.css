@@ -1,72 +1,117 @@
-.AUREO__possibility{
-    display: flex;
-    flex-direction: row;
-
+.aureo-process {
+  background: var(--canvas);
+  padding: 100px 40px;
 }
 
-.AUREO__possibility-image{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: 2rem;
-
+.aureo-process__inner {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.AUREO__possibility-image img{
-    width: 100%;
-    height: 100%;
+.aureo-process__overline {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
-.AUREO__possibility-content{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.aureo-process__heading {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: var(--white);
+  margin-bottom: 72px;
+  text-align: center;
 }
 
-.AUREO__possibility-content h4{
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 16;
-    line-height: 30px;
-    color: aqua;
-}
-.AUREO__possibility-content h4:last-child {
-    color: #8787d4;
+.aureo-process__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
-.AUREO__possibility-content h1{
-    font-family: var(--font-family);
-    font-weight: 800;
-    font-size: 45px;
-    line-height: 50px;
-
-    margin: 1rem 0;
+.aureo-process__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
-
-
-.AUREO__possibility-content p {
-    font-family: var(--font-family);
-    font-size: 16px;
-    line-height: 30px;
-    color: var(--color-text);
-
-    margin-bottom: 2rem;
+/* Text block */
+.aureo-process__text {
+  position: relative;
+  order: 1;
+}
+.aureo-process__text--right {
+  order: 2;
 }
 
-@media screen and (max-width: 950px){
-    .AUREO__possibility{
-        flex-direction: column;
-    }
+.aureo-process__step-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.1;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
 
-    .AUREO__possibility-image{
-        margin: 1rem 0;
-    }
+.aureo-process__step-content { position: relative; }
 
-    .AUREO__possibility-content{
-        margin-top:  2rem;
-    }
+.aureo-process__step-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.aureo-process__step-body {
+  font-size: 15px;
+  color: var(--body);
+  line-height: 1.7;
+}
+
+/* Visual block */
+.aureo-process__visual {
+  order: 2;
+}
+.aureo-process__visual--left {
+  order: 1;
+}
+
+.aureo-process__visual-inner {
+  background: var(--card);
+  border-radius: 12px;
+  height: 220px;
+  border: 1px solid var(--hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.aureo-process__visual-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+}
+
+@media (max-width: 768px) {
+  .aureo-process__row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .aureo-process__text,
+  .aureo-process__text--right,
+  .aureo-process__visual,
+  .aureo-process__visual--left { order: unset; }
+  .aureo-process__step-num { font-size: 72px; }
 }

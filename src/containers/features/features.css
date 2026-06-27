@@ -1,60 +1,75 @@
-.AUREO__features {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+.aureo-services {
+  background: var(--canvas);
+  padding: 80px 40px;
 }
 
-.AUREO__features-heading {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-
-    text-align: left;
-    margin-right: 5rem;
+.aureo-services__inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.AUREO__features-heading h1 {
-    font-size: 45px;
-    line-height: 50px;
-    font-weight: 800;
-    font-family: var(--font-family);
+.aureo-services__overline {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
-.AUREO__features-heading p {
-    color: var(--color-subtext);
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 500;
-    font-family: var(--font-family);
-
-    margin-top: 2rem;
+.aureo-services__heading {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--white);
+  margin-bottom: 48px;
 }
 
-.AUREO__features-container {
-    flex: 1.5;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+.aureo-services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 
-@media screen and (max-width: 990px) {
-    .AUREO__features {
-        flex-direction: column;
-    }
-
-    .AUREO__features-heading {
-        margin: 0 0 2rem 0;
-    }
+.aureo-service-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid var(--hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-
-@media screen and (max-width: 550px) {
-    .AUREO__features-heading h1 {
-        font-size: 28px;
-        line-height: 38px;
-    }
+.aureo-service-card__icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(201, 168, 76, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
+
+.aureo-service-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.aureo-service-card__text {
+  font-size: 14px;
+  color: var(--body);
+  line-height: 1.6;
+}
+
+.aureo-service-card__link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-top: auto;
+  transition: color 0.2s;
+}
+.aureo-service-card__link:hover { color: var(--gold-active); }

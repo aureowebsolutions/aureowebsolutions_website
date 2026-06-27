@@ -4,24 +4,28 @@
 @tailwind utilities;
 
 :root {
-  --font-family: 'Manrope', sans-serif;
+  /* New design tokens */
+  --font-family: 'Inter', -apple-system, sans-serif;
+  --gold: #C9A84C;
+  --gold-active: #A8893A;
+  --gold-disabled: #2E2820;
+  --canvas: #0B0E11;
+  --card: #161A1F;
+  --elevated: #1E2329;
+  --body: #E8E6E0;
+  --muted: #6B6860;
+  --white: #FFFFFF;
+  --hairline: #2B3139;
+  --on-primary: #0B0E11;
 
+  /* Legacy tokens kept for blog/contact-us pages */
   --gradient-text: linear-gradient(44deg, #ffc800 12%, #8787d4 43%, #7d877d 70%);
   --gradient-bar: linear-gradient(44deg, #ffc800 12%, #8787d4 43%, #7d877d 70%);
-  --gradient-yellow: linear-gradient(90deg, rgba(255, 215, 0, 1) 0%, rgba(240, 230, 140, 1) 50%, rgba(255, 255, 0, 1) 100%);
-  --gradient-none: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
-  
-
-  background:-o-linear-gradient(44deg, #ffc800 12%, #8787d4 43%, #7d877d 70%);
-  
-  background:linear-gradient(44deg, #ffc800 12%, #8787d4 43%, #7d877d 70%);
-
-
+  --gradient-yellow: linear-gradient(90deg, rgba(255,215,0,1) 0%, rgba(240,230,140,1) 50%, rgba(255,255,0,1) 100%);
+  --gradient-none: linear-gradient(90deg, #fff 0%, #fff 50%, #fff 100%);
   --color-bg: #040C18;
-  --color-footer : #031B34;
+  --color-footer: #031B34;
   --color-blog: #042c54;
-  /*--color-text: #81AFDD;*/
   --color-text: #fff;
   --color-subtext: #8787d4;
-
 }
