@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navigate, useParams } from 'react-router-dom';
 import { blogs_json } from './imports';
+import authorAvatar from '../../assets/people.png';
 
 const blogImages = require.context('../../assets', true)
 
@@ -18,8 +19,6 @@ const blog = getBlogById(id);
 if( !blog ){
     return <Navigate to="/#blog" />
 }
-console.log(blog);
-
     return (
             <div class="container prose-slate sm:prose-md md:prose-lg lg:prose-xl mx-auto ">
                 <section class="mb-32 text-gray-800">
@@ -27,7 +26,7 @@ console.log(blog);
                         <img src={blogImages(`./${blog.image_url}`)} class="mb-6 mt-6" alt={blog.id} />
                     </div>
                     <div class="flex items-center mb-6">
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img (23).jpg" class="rounded-full mr-2 h-8" alt="" loading="lazy" />
+                        <img src={authorAvatar} class="rounded-full mr-2 h-8" alt="author" loading="lazy" />
                         <div>
                             <span> Published <u>{ blog.date_published } </u> by </span>
                             <a href="#!" class="font-medium">{ blog.author }</a>

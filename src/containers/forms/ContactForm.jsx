@@ -1,41 +1,63 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './ContactForm.css'
-import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
+
+const Result = () => (
+   <p> Your message has been successfully sent. I will contact you soon.</p>
+);
 
 const ContactForm = () => {
    const form = useRef();
-   
-   const Result = () => {
-      return(
-         <p> Your message has been successfully sent. I will contact you soon.</p>
-      )
-   }
-   
-   const[result,showResult] = useState(false)
+   const captchaToken = useRef(null);
+   const recaptchaRef = useRef(null);
+
+   const[result, showResult] = useState(false)
+   const[sendError, setSendError] = useState(false)
    const[verified, setVerified] = useState(false)
 
-   function onChange(value) {
-      console.log("Captcha value:", value);
-      setVerified(true);
-    }
-   const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_t9x28ev', 'template_do871yd', form.current, '3LADHJ1x98S3Kwx9Y')
-        .then((result) => {
-            console.log('SUCCESS!', result.status, result.text);
-        }, (error) => {
-            console.log('FAILED...', error);
-        });
-        e.target.reset();
-        showResult(true);
-    };
+   useEffect(() => {
+      if (!result) return;
+      const timer = setTimeout(() => showResult(false), 5000);
+      return () => clearTimeout(timer);
+   }, [result]);
 
-    //hide result
-    setTimeout(() => {
-      showResult(false)
-    }, 5000);
+   function onChange(value) {
+      captchaToken.current = value;
+      setVerified(!!value);
+   }
+
+   const sendEmail = async (e) => {
+      e.preventDefault();
+      setSendError(false);
+
+      const data = new FormData(form.current);
+
+      try {
+         const res = await fetch('/.netlify/functions/send-contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+               from_name: data.get('from_name'),
+               email: data.get('email'),
+               phone: data.get('phone'),
+               message: data.get('message'),
+               captchaToken: captchaToken.current,
+            }),
+         });
+
+         if (res.ok) {
+            form.current.reset();
+            captchaToken.current = null;
+            recaptchaRef.current?.reset();
+            setVerified(false);
+            showResult(true);
+         } else {
+            setSendError(true);
+         }
+      } catch {
+         setSendError(true);
+      }
+    };
 
   return (
     <div>
@@ -154,6 +176,7 @@ const ContactForm = () => {
                         ></textarea>
                   </div>
                   <ReCAPTCHA
+                     ref={recaptchaRef}
                      sitekey="6LceXqckAAAAAORLyh4jaKaTYzMIbv9_sopmk4Gt"
                      onChange={onChange}
                   />
@@ -178,6 +201,7 @@ const ContactForm = () => {
                   </div>
                   <div className='AUREO_result-message'>
                      {result ? <Result /> : null}
+                     {sendError ? <p style={{color:'red'}}>Failed to send message. Please try again.</p> : null}
                   </div>
                </form>
                <div>
