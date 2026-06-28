@@ -13,6 +13,10 @@
 
 ALTER TABLE blogs ENABLE ROW LEVEL SECURITY;
 
+-- Grant table-level access so RLS policies can evaluate (RLS filters rows, GRANT allows table entry)
+GRANT SELECT ON public.blogs TO anon;
+GRANT ALL    ON public.blogs TO authenticated;
+
 CREATE POLICY "Public can read published blogs"
   ON blogs FOR SELECT
   USING (is_published = true);
@@ -24,6 +28,9 @@ CREATE POLICY "Admins can manage blogs"
 -- ── works ─────────────────────────────────────────────────────────────────────
 
 ALTER TABLE works ENABLE ROW LEVEL SECURITY;
+
+GRANT SELECT ON public.works TO anon;
+GRANT ALL    ON public.works TO authenticated;
 
 CREATE POLICY "Public can read published works"
   ON works FOR SELECT
