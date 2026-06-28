@@ -22,6 +22,7 @@ const MAX_BYTES = 5 * 1024 * 1024 // 5 MB
  * @throws {Error} If validation fails or the upload errors
  */
 export async function uploadImage(bucket, path, file) {
+  if (!supabase) throw new Error('Supabase not configured')
   if (!ALLOWED_TYPES.includes(file.type)) {
     throw new Error(`Invalid file type "${file.type}". Allowed: jpg, png, webp.`)
   }

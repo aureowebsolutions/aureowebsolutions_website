@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 import './navbar.css'
 
@@ -29,7 +30,7 @@ const Navbar = () => {
       </div>
 
       <div className="aureo-nav__actions">
-        <a href="/#contact" className="aureo-nav__login">Log In</a>
+        <Link to="/login" className="aureo-nav__login">Log In</Link>
         <a href="/#contact" className="aureo-nav__cta">Get Started</a>
       </div>
 
@@ -49,6 +50,7 @@ const Navbar = () => {
           <a href="/#work"     onClick={() => setMenuOpen(false)}>Work</a>
           <a href="/#process"  onClick={() => setMenuOpen(false)}>Process</a>
           <a href="/#contact"  onClick={() => setMenuOpen(false)}>Contact</a>
+          <Link to="/login"    onClick={() => setMenuOpen(false)} className="aureo-nav__login">Log In</Link>
           <a href="/#contact"  onClick={() => setMenuOpen(false)} className="aureo-nav__cta">Get Started</a>
         </div>
       )}
